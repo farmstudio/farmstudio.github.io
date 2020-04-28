@@ -6,7 +6,7 @@ Lejjebb részletesen le van írva, de ha már van egy működő projekted, ezzel
 
     git pull
     ddev start
-    ddev exec composer install
+    ddev composer install
     ddev exec ./craft migrate/all
     ddev exec ./craft project-config/sync
     ddev exec ./craft clear-caches/all
