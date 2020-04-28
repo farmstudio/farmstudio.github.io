@@ -18,8 +18,8 @@ Lejjebb részletesen le van írva, de ha már van egy működő projekted, ezzel
 
 ha még nincs, telepíteni Docker-t meg DDev-et
 
-- https://www.docker.com/products/docker-desktop
-- https://ddev.readthedocs.io/en/stable/
+- [docker](https://www.docker.com/products/docker-desktop)
+- [ddev](https://ddev.readthedocs.io/en/stable/)
 
 átmásolni a .env.example-t .env-nek
 
@@ -40,7 +40,7 @@ Lépj be az adminba
 
 Töltsd le az adatbázist
 
-![Login](/img/dbdump.png)
+![db dump](/img/dbdump.png)
 
 ## Adatbázis betöltés
 
