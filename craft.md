@@ -25,27 +25,14 @@ ha még nincs, telepíteni Docker-t meg DDev-et
 
     cp .env.example .env
 
-elindítani a ddev környezetet
-
-    ddev start
-
-be kell szerezni egy adatbázis dumpot és azt betölteni
-
-    ddev import-db --src=letoltott-sql-file-neve.sql
-
-*(ha zip-ben vagy gz-ben van letöltve az adatbázis, azt is 
-meg lehet adni közvetlenül az import-db-nek, nem kell külön kicsomagolni)*
-
-lásd KÓDÉPÍTÉS
-
-ha sikerült, akkor itt be kell hogy töltsön az oldal:
+és utána megcsinálni sorban az alábbiakat (adatbázis betöltés, kódépítés). Ha sikerült, akkor itt be kell hogy töltsön az oldal:
 
 - [http://projektneve.ddev.site](http://projektneve.ddev.site)
 
 
-## Friss adatbázis betöltés
+## Friss adatbázis letöltés
 
-Ha van hozzáférésed az éles vagy a tesztoldal adminjához, le tudod tölteni az adatbázisát.
+Ha van hozzáférésed az éles vagy a tesztoldal adminjához, le tudod tölteni a friss adatbázisát.
 
 Lépj be az adminba
 
@@ -55,11 +42,19 @@ Töltsd le az adatbázist
 
 ![Login](/img/dbdump.png)
 
-Töltsd be a letöltött adatbázist a ddev-be
+## Adatbázis betöltés
+
+Töltsd be a letöltött vagy fejlesztőtől kapott adatbázist a ddev-be
 
     ddev import-db --src=c:\folder\letoltott-sql-file-neve.sql
 
+## Feltöltött file-ok szinkronizálása
+
+Ha van hozzáférésed a szerverhez, letöltheted az adminon keresztül feltöltött kép stb. fileokat. Ezek általában a `web/assets` könyvtár alatt lesznek, ezeket a saját `web/assets` könyvtáradba töltsd.
+
 ## Kódépítés
+
+### Backend: php és craft
 
 Ha még nem fut a ddev, akkor elindítani
 
@@ -79,7 +74,7 @@ craft beállításokat, adatbázist szinkronizálni
     ddev exec ./craft project-config/sync
     ddev exec ./craft clear-caches/all
 
-frontend: javascript/css
+### Frontend: javascript és css
 
 ha használ a projekt bowert (van `bower.json` a projektkönyvtárban)
 
